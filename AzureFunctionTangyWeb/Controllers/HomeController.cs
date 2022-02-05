@@ -39,7 +39,7 @@ public class HomeController : Controller
             System.Text.Encoding.UTF8, "application/json"))
         {
             //call our function and pass the content
-
+            //Need to update URL
             HttpResponseMessage response = await client.PostAsync("http://localhost:7071/api/OnSalesUploadWriteToQueue", content);
             string returnValue = response.Content.ReadAsStringAsync().Result;
         }
